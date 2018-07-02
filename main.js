@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-var med_app = require("./app");
+var med_app = require("./medication/app");
 var insu_app = require("./insurance/app");
 var prov_app = require("./provider/app");
 
