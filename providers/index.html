@@ -59,7 +59,7 @@ th {
     // GET/READ
     //alert("response");
         $.ajax({
-            url: '/providers?name='+searchValue,
+            url: '/providers/api?name='+searchValue,
             dataType: 'jsonp',
             success: function(data) {
                 var tbodyEl = $('tbody');
