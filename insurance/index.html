@@ -56,7 +56,7 @@ th {
     // GET/READ
     //alert("response");
         $.ajax({
-            url: '/insurance?search='+searchValue,
+            url: '/insurance/api?search='+searchValue,
             dataType: 'jsonp',
             success: function(data) {
                 var tbodyEl = $('tbody');
