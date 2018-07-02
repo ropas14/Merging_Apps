@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INSURANCE API </title>
+    <style>
+th,td {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+ </style>
+</head>
+<body>
+  <h1>INSURANCE DATA LOOK UP API</h1>
+  <form id="formoid" action="" title="" method="post">
+        <div>
+            <label class="title">search Term</label>
+            <input type="text" id="search" name="search" >
+            <input type="submit" id="submitButton"  name="submitButton" value="Search">
+        </div>
+ </form>
+ <h2><div id ='rs'>O items found</div></h2>
+    <table>
+        <thead>
+            <tr>
+                <th>CARRIER</th>
+                <th>PLANNAME</th>
+                <th>STATE</th>
+                <th>YEAR</th>
+                <th>PLANID</th>
+                <th>MATAL</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $("#formoid").submit(function(event) {
+      /* stop form from submitting normally */
+      event.preventDefault();
+     /* Send the data using post with element id name and name2*/
+      var searchValue= $('#search').val();
+    // GET/READ
+    //alert("response");
+        $.ajax({
+            url: '/insurance?search='+searchValue,
+            dataType: 'jsonp',
+            success: function(data) {
+                var tbodyEl = $('tbody');
+                //alert("uuuuuuuuuuuuuuuuuuuu");
+              $('#rs').text(data.length+' items found');
+                tbodyEl.html('');
+               $.each(data, function(index, element) {
+                    tbodyEl.append('\
+                        <tr>\
+                            <td class="id">'+element.cr+'</td>\
+                            <td class="id">' + element.pn + '</td>\
+                            <td class="id">' + element.st + '</td>\
+                            <td class="id">' + element.yr + '</td>\
+                            <td class="id">' + element.pid + '</td>\
+                            <td class="id">' + element.mt + '</td>\
+                        </tr>\
+                    ');
+                });
+            }
+        });
+    });
+      });
+    </script>
+
+</body>
+</html>
