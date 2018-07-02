@@ -5,14 +5,14 @@
     "node": "8.11.2"
   },
   "description": "Look up for medication data",
-  "main": "app.js",   
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ropas14/MedicationData.git"
+    "url": "git+https://github.com/ropas14/Merging_Apps.git"
   },
   "keywords": [
     "search",
@@ -21,16 +21,19 @@
   "author": "ropafadzo shumba",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ropas14/MedicationData/issues"
+    "url": "https://github.com/ropas14/Merging_Apps/issues"
   },
-  "homepage": "https://github.com/ropas14/MedicationData#readme",
+  "homepage": "https://github.com/ropas14/Merging_Apps#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
     "fast-levenshtein": "^2.0.6",
     "mongodb": "^3.0.10",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "simple-spellchecker": "^0.9.5"
   },
   "devDependencies": {
     "nodemon": "^1.17.5"
