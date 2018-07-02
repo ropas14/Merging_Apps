@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.get("/",function(req,res){
 	  res.sendFile( __dirname+'/index.html');
  });
-app.get('/insurance',function(req,res){
+app.get('/api',function(req,res){
   //var searchValue =req.body.search;
    var searchValue =req.query.search;
    if(searchValue){
@@ -118,8 +118,4 @@ app.get('/insurance',function(req,res){
        })
    }
 });
-//app.use('/api',require('./routes/routes'));
-var server = app.listen(process.env.PORT || 3000, function () {
-    var port = server.address().port;
-    console.log("App now running on port", port);
-  });
+module.exports = app;
