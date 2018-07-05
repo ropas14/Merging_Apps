@@ -79,7 +79,7 @@ $(function(){
    var search = $('#txtsearch').val();
    $.ajax({
    type:'GET',
-   url :"/api/symptoms?search="+search,
+   url :"/symptom/api/symptoms?search="+search,
    dataType: 'json',
     success: function(data) {
         console.log('success',data);

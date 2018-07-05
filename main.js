@@ -11,7 +11,7 @@ app.set('port', process.env.PORT || 3000);
 app.use('/medication', med_app);
 app.use('/insurance', insu_app);
 app.use('/provider', prov_app);
-app.use('/symptoms', sympt_app);
+app.use('/symptom', sympt_app);
 
 app.get('/', function (req, res) {
   res.send("This is the '/' route in main_app");

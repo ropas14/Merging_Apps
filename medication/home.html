@@ -96,7 +96,7 @@ $(function(){
    var search = $('#txtsearch').val();
    $.ajax({
    type:'GET',
-   url :"/api/medication/?search="+search,
+   url :"/medication/api/medication/?search="+search,
    dataType: 'json',
    success: function(data) {
         console.log('success',data);
