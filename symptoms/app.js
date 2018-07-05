@@ -8,7 +8,6 @@ const symptData = require("./data/webmdSymptoms.json");
 
 const app =express();
 // Middlewares
-app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -63,9 +62,5 @@ app.get('/api/symptoms',function(req,res){
            res.jsonp(initarr.concat(incdsarr));
           
       });
-
-
-app.listen(app.get('port'));
-console.log("server listening on port " + app.get('port'));
 
 module.exports=app;

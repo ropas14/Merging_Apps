@@ -12,8 +12,6 @@ var drugResults=[];
 var drugnamez=[];
 var closeres=[];
  
-
-app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -128,7 +126,5 @@ function sortbyDistance(a,b){
 
 }
 
-app.listen(app.get('port'));
-console.log("server listening on port " + app.get('port'));
 
 module.exports = app;
