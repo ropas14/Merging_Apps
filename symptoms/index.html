@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Symptoms</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+       #btnSubmit{
+        width: 120px;
+        height: 35px;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+        text-shadow: 0 1px rgba(0,0,0,0.4);
+        background-color: #4e1c28;
+        border-radius: 3px;
+       font-weight: 700;
+		       }
+		#btnSubmit:hover{
+        background-color:#5a4e51;
+        cursor:pointer
+           }
+   table { 
+  width: 100%; 
+  border-collapse: collapse;
+  empty-cells: hide; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #330c16; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+ 
+tr td:hover { background: #f0f8ff; color: #5d0a90; }  
+	</style>
+</head>
+
+<body>
+<h1 style="color: #5a091f;">Symptoms Data Lookup</h1>
+<form id="form1" action="" title="" method="post">
+      <div>          
+        <input type="text" id="txtsearch" name="search " style="padding: 6px 30px 8px 20px;border: 2px solid #6f6f6f;">
+       <input type="submit" id="btnSubmit"  name="submitButton" value="Search" >
+      </div>
+ </form>
+
+<table id="table-items">
+	<thead id="tableHeaders">
+	<tr>
+       <!-- <th>Relation</th> -->
+        <th>Symptoms</th>
+       <!--  <th>More Information</th> -->
+    </tr>
+	</thead>
+	<tbody id= "tableData">
+		
+	</tbody>	
+	
+
+</table>
+
+
+<script type="text/javascript">	
+$(function(){
+  $('table').hide();
+  $('#btnSubmit').click(function (e){  
+   e.preventDefault();     
+   var search = $('#txtsearch').val();
+   $.ajax({
+   type:'GET',
+   url :"/api/symptoms?search="+search,
+   dataType: 'json',
+    success: function(data) {
+        console.log('success',data);
+        $('tbody#tableData').empty();
+         $.each(data, function(indx, elemnt) {
+        $('tbody#tableData').append('<tr><td>'+ elemnt.sy +'</td></tr>');
+           	  $('#table-items').show();	        	      	           
+          });
+        },
+    error:function(exception){
+   	alert('Exeption:'+exception);
+       }
+    }); 
+ 
+   });
+});
+
+</script>
+</body>
+</html>
+
+    

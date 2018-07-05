@@ -4391,7 +4391,7 @@
     "popularity": "34",
     "description": "Ibuprofen is an NSAID used to treat fever and minor aches and pains. It works by reducing inflammation. Ibuprofen is a generic medication, and is available both over-the-counter and by prescription depending on the strength. Over-the-counter brands include Advil and Motrin IB. Prescription Motrin had the same active ingredient, but has been discontinued. Ibuprofen should be used only when needed as it may increase risk of stroke or heart attack and long term use can cause stomach bleeding and ulcers.",
     "drugInfo": "IBUPROFEN is a non-steroidal anti-inflammatory drug (NSAID). It is used for dental pain, fever, headaches or migraines, osteoarthritis, rheumatoid arthritis, or painful monthly periods. It can also relieve minor aches and pains caused by a cold, flu, or sore throat. The lowest GoodRx price for the most common version of ibuprofen non-prescription is around $1.74, 66% off the average retail price of $5.28. Compare NSAIDs.",
-    "dosage": "",
+    "dosage": ["400mg", "600mg", "800mg"],
     "country": "US",
     "drug": "advil(ibuprofen non-prescription)"
 }, {
@@ -8325,7 +8325,7 @@
     "popularity": "91",
     "description": "IBUPROFEN is a non-steroidal anti-inflammatory drug (NSAID). This medicine can relieve minor aches and pains caused by a cold, flu, sore throat, headache, or toothache. It is used to treat fever or pain for a short time.",
     "drugInfo": "IBUPROFEN is a non-steroidal anti-inflammatory drug (NSAID). This medicine can relieve minor aches and pains caused by a cold, flu, sore throat, headache, or toothache. It is used to treat fever or pain for a short time.  Compare NSAIDs.",
-    "dosage": "",
+    "dosage": ["400mg", "600mg", "800mg"],
     "country": "US",
     "drug": "infants advil(infants ibuprofen)"
 }, {
@@ -8395,7 +8395,7 @@
     "popularity": "80",
     "description": "IBUPROFEN; PSEUDOEPHEDRINE is a combination of a non-steroidal anti-inflammatory drug (NSAID) and a decongestant. It is used to treat the aches and pains, congestion, and fever of the common cold, flu, or sinus problems.",
     "drugInfo": "IBUPROFEN; PSEUDOEPHEDRINE is a combination of a non-steroidal anti-inflammatory drug (NSAID) and a decongestant. It is used to treat the aches and pains, congestion, and fever of the common cold, flu, or sinus problems.  Compare NSAID cough and cold combinations.",
-    "dosage": "",
+    "dosage": ["400mg", "600mg", "800mg"],
     "country": "US",
     "drug": "advil cold and sinus(ibuprofen/pseudoephedrine)"
 }, {
@@ -8423,7 +8423,7 @@
     "popularity": "73",
     "description": "IBUPROFEN is a non-steroidal anti-inflammatory drug (NSAID). It is used for dental pain, fever, headaches or migraines, osteoarthritis, rheumatoid arthritis, or painful monthly periods. It can also relieve minor aches and pains caused by a cold, flu, or sore throat.",
     "drugInfo": "IBUPROFEN is a non-steroidal anti-inflammatory drug (NSAID). It is used for dental pain, fever, headaches or migraines, osteoarthritis, rheumatoid arthritis, or painful monthly periods. It can also relieve minor aches and pains caused by a cold, flu, or sore throat.  Compare NSAIDs.",
-    "dosage": "",
+    "dosage": ["400mg", "600mg", "800mg"],
     "country": "US",
     "drug": "advil junior strength(ibuprofen junior strength)"
 }, {
@@ -8976,7 +8976,7 @@
     "popularity": "21",
     "description": "OXYBUTYNIN is used to treat overactive bladder. This medicine reduces the amount of bathroom visits. It may also help to control wetting accidents.",
     "drugInfo": "OXYBUTYNIN is used to treat overactive bladder. This medicine reduces the amount of bathroom visits. It may also help to control wetting accidents.  Compare muscarinic agonists.",
-    "dosage": "",
+    "dosage": ["5mg"],
     "country": "US",
     "drug": "oxytrol for women"
 }, {
